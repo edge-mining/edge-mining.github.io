@@ -7,7 +7,7 @@ actions:
     link: /docs/intro.html
     type: primary
   - text: GitHub
-    link: https://github.com/bitsalv/edgemining.energy
+    link: https://github.com/edge-mining/edgemining.energy
     type: secondary
 features:
   - title: Smart automation
@@ -47,17 +47,60 @@ Connect with our community to discuss ideas, ask questions, and collaborate on n
 
 Explore our codebase, contribute to development, or fork the project to create your own solution.
 
-<a href="https://github.com/bitsalv/edgemining.energy" target="_blank" class="action-button">View on GitHub</a>
+<a href="https://github.com/edge-mining/edgemining.energy" target="_blank" class="action-button">View on GitHub</a>
 
 ---
 
 ## Repository Information
 
-This repository contains the **VuePress website** for Edge Mining. The documentation content is automatically synced from the [edgemining-docs](https://github.com/bitsalv/edgemining-docs) repository.
+This repository contains the **VuePress website** for Edge Mining. The documentation content is automatically synced from the [edge-mining/docs](https://github.com/edge-mining/docs) repository.
 
-### Local Development
+### 🎯 For Website Developers
+
+This repository is for **website development and deployment**. The documentation content is automatically synced from the [edge-mining/docs](https://github.com/edge-mining/docs) repository.
+
+> **🛠️ For Developers**: This repository is for **technical development** - VuePress configuration, styling, build processes, and deployment. If you're an **editor** making content changes, use the [edge-mining/docs](https://github.com/edge-mining/docs) repository instead.
+
+### 🔄 Repository Workflow
+
+```
+Documentation Changes:
+edge-mining/docs (FOR EDITORS)
+    ↓ (Auto-sync)
+edge-mining/edgemining.energy (FOR DEVELOPERS)
+    ↓ (Auto-deploy)
+Live Site (edgemining.energy)
+
+Website Changes:
+edge-mining/edgemining.energy (FOR DEVELOPERS)
+    ↓ (Auto-deploy)
+Live Site (edgemining.energy)
+```
+
+### 📁 Repository Structure
+
+```
+edgemining.energy/
+├── docs/                     # VuePress site (auto-synced from edge-mining/docs)
+│   ├── .vuepress/           # VuePress configuration
+│   │   ├── config.js        # Site configuration
+│   │   ├── styles/          # Custom CSS styles
+│   │   └── public/          # Static assets (logo, favicon)
+│   ├── docs/                # Documentation content (auto-synced)
+│   └── README.md            # Homepage content
+├── package.json             # Dependencies and scripts
+└── .github/workflows/       # Build and deploy workflows
+```
+
+## 🛠️ Development
+
+### **For Website Development:**
 
 ```bash
+# Clone this repository
+git clone https://github.com/edge-mining/edgemining.energy.git
+cd edgemining.energy
+
 # Install dependencies
 npm install
 
@@ -71,6 +114,45 @@ npm run docs:build
 npm run docs:clean
 ```
 
-### Automatic Deployment
+### **Access:**
+- **Development**: `http://localhost:8080/`
+- **Production**: [edgemining.energy](https://edgemining.energy)
 
-This site is automatically built and deployed to GitHub Pages when changes are pushed to the `main` branch. The live site is available at [edgemining.energy](https://edgemining.energy). 
+## 📝 Contribution Workflow
+
+### **For Documentation Changes:**
+1. **Don't edit docs here** - Edit in [edge-mining/docs](https://github.com/edge-mining/docs) instead
+2. **Documentation is auto-synced** from the documentation repository
+3. **Create PR to edge-mining/docs** for documentation changes
+
+### **For Website Changes:**
+1. **Edit VuePress configuration** in this repository
+2. **Test locally** with `npm run docs:dev`
+3. **Create PR to this repository** for website changes
+4. **Changes auto-deploy** to the live site
+
+## 🔗 Important Links
+
+- **Documentation Repository**: [edge-mining/docs](https://github.com/edge-mining/docs) (for editors)
+- **Live Website**: [edgemining.energy](https://edgemining.energy)
+- **Community**: [Discord](https://discord.com/invite/VQa9UY5SsS)
+
+## ⚠️ Important Notes
+
+- **Auto-deploy**: Changes here automatically deploy to the live site
+- **Documentation sync**: Documentation is automatically synced from edge-mining/docs
+- **No direct editing**: Don't edit documentation content here
+- **Developer-focused**: This repository is for technical development, not content editing
+
+## 🎯 Next Steps for Contributors
+
+1. **Fork this repository** (if you haven't already)
+2. **Make your changes** to the website/VuePress configuration
+3. **Test locally** using the development server
+4. **Create a Pull Request** to this repository
+5. **Wait for review and merge**
+6. **Changes will automatically deploy** to the live site
+
+---
+
+**Note**: This repository is for the VuePress website only. Documentation content should be edited in the [edge-mining/docs](https://github.com/edge-mining/docs) repository. 

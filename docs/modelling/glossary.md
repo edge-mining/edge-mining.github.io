@@ -1,90 +1,160 @@
 # Glossary
 
-Following the **Ubiquitous Language** approach of Domain-Driven Design (DDD), this glossary is organized by subdomains and contains simplified definitions gathered from domain experts. Its purpose is to establish a clear and consistent vocabulary, essential for effective communication and development of the application.
+This glossary defines key terms and concepts used throughout the Edge Mining documentation and codebase.
 
-Subdomains:
-- 🟢 [Energy Optimization & Mining Automation](#energy-optimization--mining-automation)
-- 🟣 [Energy System Monitoring](#energy-system-monitoring)
-- 🟣 [Mining Device Management](#mining-device-management)
-- 🟣 [Home Consumption Analytics](#home-consumption-analytics)
-- 🟣 [Energy Forecast](#energy-forecast)
-- 🟣 [Heat Utilization](#heat-utilization)
-- 🟣 [Mining Performance Analysis](#mining-performance-analysis)
-- ⚫ [User Settings](#user-settings)
-- ⚫ [Notification System](#notification-system)
+## A
 
-## Energy Optimization & Mining Automation
-**Automation Rule**: Rules that automate the process of turning on, controlling, or turning off a miner. For example, turn off the miner if the battery has dropped below 80%.
+### Aggregate
+A cluster of domain objects that can be treated as a single unit for data changes. Aggregates have a root entity that maintains consistency boundaries.
 
-**Optimization Policy**: Collection of automation rules that define energy optimization policies aimed at achieving a goal. For example:
-- *Preserve Battery*: a collection of rules designed to provide power to the miner only if the battery is full without ever discharging it.
-- *Stop Export*: a collection of rules aimed at reduce or totally stopping the energy exported to the Grid Operator.
+### Anti-Corruption Layer
+A design pattern that isolates a system from external dependencies by translating between different data models and protocols.
 
-## Energy System Monitoring
-**Inverter**: A machine that produces energy using solar panels. It may have one or multiple MPPTs and can be either on-grid or off-grid.
+### API (Application Programming Interface)
+A set of rules and protocols that allows different software applications to communicate with each other.
 
-**Solar panel**: A hardware component that produces energy from sunlight.
+## B
 
-**Battery**: A hardware component that stores energy.
+### Block
+A collection of transactions in a blockchain that has been cryptographically linked to the previous block.
 
-**Battery SoC**: *State of Charge* of the battery; it represents the total amount of energy stored in the battery.
+### Block Reward
+The cryptocurrency reward given to miners for successfully mining a new block in the blockchain.
 
-**Battery Discharge**: The process by which energy exits the battery.
+### Bounded Context
+A boundary within which a particular domain model is defined and applicable. It helps manage complexity by clearly defining what belongs to the domain and what doesn't.
 
-**Battery Charge**: The process by which energy enters the battery.
+## C
 
-**Unused Energy**:
-- In On-Grid systems, this is the energy not used by the loads and fed into the national electric grid.
-- In Off-Grid systems, this is the energy not produced by the system because it is not required by the loads/batteries.
+### Command
+An object that represents an intention to change the state of the system. Commands are processed by command handlers.
 
-**Loads**: Devices that consume energy.
+### CQRS (Command Query Responsibility Segregation)
+A pattern that separates read and write operations for a data store, allowing them to be optimized independently.
 
-## Mining Device Management
-**Miner**: A machine that uses electrical energy to solve mathematical calculations and produce heat.
+### Cryptocurrency
+A digital or virtual currency that uses cryptography for security and operates on a decentralized network.
 
-**Hashboard**: The part of the miner that contains the chips responsible for calculating hashes.
+## D
 
-**Control board**: The main controller in a miner that manages communication, power distribution, and operational logic.
+### Domain
+A sphere of knowledge, influence, or activity. In Domain-Driven Design, a domain represents a specific area of business functionality.
 
-**Fan**: A cooling component that regulates the miner's internal temperature by moving air across heated parts.
+### Domain Event
+A significant occurrence that happened within the domain. Domain events are used to communicate changes between different parts of the system.
 
-**Smart plug**: A remotely controllable power outlet that can be used to power on/off a miner automatically or based on conditions.
+### Domain Model
+A conceptual model of the domain that incorporates both behavior and data. It represents the core business logic and rules.
 
-**Hashrate**: A measurement of the computing power of a miner.
+### Domain Service
+A service that implements domain logic that doesn't naturally belong to any entity or value object.
 
-**Energy consumption**: The electrical energy used by the miner.
+## E
 
-**Core temperature**: The temperature of the main chips.
+### Edge Device
+A computing device that performs data processing at the edge of a network, closer to the data source, rather than in a centralized location.
 
-**Efficiency**: The power consumption in relation to the produced hashrate. Can be measured in W/TH or J/TH.
+### Entity
+An object that has a unique identity and a lifecycle that can change over time. Entities are defined by their identity rather than their attributes.
 
-**Mining pool**: A group of miners who combine their computational resources to increase the probability of mining a block and share the reward proportionally.
+### Event Sourcing
+A pattern where all changes to application state are stored as a sequence of events. The current state can be reconstructed by replaying these events.
 
-**Stock Firmware**: The original firmware pre-installed by the miner's manufacturer. It governs low-level operations such as startup sequences, thermal management, fan control, hashrate adjustment, and network communication. Typically more stable but less customizable than third-party firmware.
+## F
 
-**Third-Party Firmware**: Custom firmware developed by independent developers or communities that replaces the stock firmware on a miner. It often provides enhanced functionality, greater configurability, performance tuning options, and additional features such as API access, advanced monitoring, or custom fan curves. It may, however, require more technical knowledge and can void warranties.
+### Fork
+A situation where a blockchain splits into two separate chains, usually due to a disagreement in the network about which version of the blockchain to follow.
 
-## Home Consumption Analytics
+## H
 
-*to complete...*
+### Hash
+A mathematical function that converts input data of any size into a fixed-size string of characters. In cryptocurrency mining, hashes are used to secure the blockchain.
 
-## Energy Forecast
+### Hash Rate
+The speed at which a computer or network can perform hash operations. It's a measure of mining power and is typically expressed in hashes per second (H/s).
 
-*to complete...*
+## M
 
-## Heat Utilization
+### Mining
+The process of validating and adding new transactions to a blockchain by solving complex mathematical puzzles.
 
-*to be complete...*
+### Mining Pool
+A group of miners who combine their computational resources to increase their chances of successfully mining blocks and earning rewards.
 
-## Mining Performance Analysis
+### Mining Task
+A specific computational task assigned to miners, typically involving finding a hash that meets certain criteria.
 
-*to be complete...*
+## N
 
-## User Settings
+### Node
+A computer or device that participates in a blockchain network by maintaining a copy of the blockchain and validating transactions.
 
-*to be complete...*
+### Nonce
+A number used once in cryptographic communications. In mining, it's a value that miners change to try to find a valid hash.
 
-## Notification System
+## P
 
-*to be complete...*
+### Peer
+Another node in the network with which a node can communicate directly.
 
+### Proof of Work (PoW)
+A consensus mechanism that requires participants to perform computational work to validate transactions and create new blocks.
+
+## Q
+
+### Query
+An object that represents a request for data from the system. Queries are processed by query handlers and do not change system state.
+
+## R
+
+### Repository
+An abstraction that encapsulates the logic required to access data sources. Repositories provide a collection-like interface for accessing domain objects.
+
+### Reward
+The cryptocurrency payment given to miners for successfully mining a block or contributing to the network.
+
+## S
+
+### Service
+A stateless object that implements domain logic that doesn't belong to any entity or value object.
+
+### Shared Kernel
+A design pattern where multiple bounded contexts share a common subset of the domain model, including code, database schema, and language.
+
+### Smart Contract
+A self-executing contract with the terms of the agreement directly written into code. Smart contracts run on blockchain platforms.
+
+## T
+
+### Transaction
+A record of a cryptocurrency transfer from one address to another. Transactions are grouped together in blocks.
+
+### Transaction Fee
+A small amount of cryptocurrency paid to miners for processing and validating a transaction.
+
+## U
+
+### User Story
+A description of a feature from the perspective of the end user. User stories help guide development by focusing on user value.
+
+## V
+
+### Value Object
+An object that represents a descriptive aspect of the domain with no conceptual identity. Value objects are defined by their attributes rather than their identity.
+
+## W
+
+### Wallet
+A digital tool that allows users to store, send, and receive cryptocurrency. Wallets contain private keys that are used to sign transactions.
+
+### WebSocket
+A communication protocol that provides full-duplex communication channels over a single TCP connection, enabling real-time data exchange.
+
+## Z
+
+### Zero-Knowledge Proof
+A cryptographic method that allows one party to prove to another that a statement is true without revealing any information beyond the validity of the statement itself.
+
+---
+
+This glossary is a living document that will be updated as the Edge Mining platform evolves. If you encounter terms that are not defined here, please contribute to the documentation by adding them. 
