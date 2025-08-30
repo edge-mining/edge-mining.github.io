@@ -26,14 +26,14 @@ Edge Mining is currently in an **alpha stage** of development. Our research-driv
 
 To get involved with Edge Mining:
 
-1. **Explore the Documentation**: Start with our [About Us](/docs/about-us.html) page
-2. **Understand the Product**: Learn about our [Product Cycle](/docs/product/product-cycle.html)
-3. **Study the Architecture**: Dive into our [Domain-Driven Architecture](/docs/modelling/domain-driven-architecture-overview.html)
-4. **Join the Community**: Connect with us on [Discord](https://discord.gg/edgemining) and [GitHub](https://github.com/edge-mining/docs)
+1. **Explore the Documentation**: Start with our [About Us](./about-us.md) page
+2. **Understand the Product**: Learn about our [Product Cycle](./product/product-cycle.md)
+3. **Study the Architecture**: Dive into our [Domain-Driven Architecture](./modelling/domain-driven-architecture-overview.md)
+4. **Join the Community**: Connect with us on [Discord](https://discord.com/invite/VQa9UY5SsS) and [GitHub](https://github.com/bitsalv/edgemining.energy)
 
 ## Next Steps
 
-- [About Us](/docs/about-us.html) - Learn more about our mission and values
-- [Product Cycle](/docs/product/product-cycle.html) - Understand our development process
-- [Contribution](/docs/contribution.html) - Find out how to contribute
-- [FAQ](/docs/faq.html) - Get answers to common questions 
+- [About Us](./about-us.md) - Learn more about our mission and values
+- [Product Cycle](./product/product-cycle.md) - Understand our development process
+- [Contribution](./contribution.md) - Find out how to contribute
+- [FAQ](./faq.md) - Get answers to common questions 

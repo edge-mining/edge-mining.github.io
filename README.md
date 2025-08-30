@@ -7,7 +7,7 @@ actions:
     link: /docs/intro.html
     type: primary
   - text: GitHub
-    link: https://github.com/edge-mining
+    link: https://github.com/bitsalv/edgemining.energy
     type: secondary
 features:
   - title: Smart automation
@@ -47,4 +47,30 @@ Connect with our community to discuss ideas, ask questions, and collaborate on n
 
 Explore our codebase, contribute to development, or fork the project to create your own solution.
 
-<a href="https://github.com/edge-mining" target="_blank" class="action-button">View on GitHub</a> 
+<a href="https://github.com/bitsalv/edgemining.energy" target="_blank" class="action-button">View on GitHub</a>
+
+---
+
+## Repository Information
+
+This repository contains the **VuePress website** for Edge Mining. The documentation content is automatically synced from the [edgemining-docs](https://github.com/bitsalv/edgemining-docs) repository.
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run docs:dev
+
+# Build for production
+npm run docs:build
+
+# Clean build files
+npm run docs:clean
+```
+
+### Automatic Deployment
+
+This site is automatically built and deployed to GitHub Pages when changes are pushed to the `main` branch. The live site is available at [edgemining.energy](https://edgemining.energy). 

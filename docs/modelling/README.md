@@ -53,7 +53,7 @@ When contributing to the architecture:
 
 ## Related Resources
 
-- [Main Project Repository](https://github.com/edge-mining/docs)
+- [Main Project Repository](https://github.com/bitsalv/edgemining.energy)
 - [Domain-Driven Design Resources](https://martinfowler.com/bliki/DomainDrivenDesign.html)
 - [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) 
