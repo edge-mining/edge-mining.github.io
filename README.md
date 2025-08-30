@@ -1,37 +1,50 @@
-# edgemining.energy
-
-**Edge Mining** is a FOSS project that integrates Bitcoin mining with renewable energy systems.  
-This repository contains the source code for the project's official landing page: [edgemining.energy](https://edgemining.energy)
-
+---
+home: true
+heroText: Edge Mining
+tagline: mine your energy
+actions:
+  - text: Documentation
+    link: /docs/intro.html
+    type: primary
+  - text: GitHub
+    link: https://github.com/edge-mining
+    type: secondary
+features:
+  - title: Smart automation
+    details: Intelligent automation based on energy availability to maximize efficiency
+  - title: Heat recovery
+    details: Advanced heat recovery systems for practical applications
+  - title: Versatile sizing
+    details: Designed for small to medium energy installations
+  - title: 100% open-source
+    details: Fully open-source with no licensing fees
+footer: MIT Licensed | Copyright © 2024 Edge Mining Team
 ---
 
-## ⚡ Why Edge Mining?
+## About Edge Mining
 
-In many renewable energy setups (like solar or wind), there are periods of excess energy generation that don’t align with consumption. Instead of wasting this energy or investing in expensive storage systems, **Bitcoin mining offers a flexible and profitable way to use it.**
+Edge Mining is a research-driven, open-source initiative transforming surplus energy into Bitcoin-powered digital value, unlocking new economic possibilities from otherwise wasted resources.
 
-Edge Mining helps:
-- Automate the mining process based on solar/battery conditions
-- Use surplus energy efficiently
-- Reuse miner heat for space heating
-- Make mining accessible and useful for small/medium energy producers
+## Why We Exist
 
----
+Energy often goes unused during low-demand periods. Instead of selling cheaply, investing in costly storage, or wasting this energy, Edge Mining converts it directly into Bitcoin, creating value sustainably and intelligently.
 
-## 🌐 Live Website
+::: tip We're in Alpha
+Edge Mining is currently in an early, alpha stage of development. Our research-driven approach is rapidly evolving, and features, performance, and reliability are continuously improving.
+:::
 
-➡️ [https://edgemining.energy](https://edgemining.energy)
+## Get Involved
 
-This landing page explains the project’s purpose and links to:
-- 💬 Community (Discord)
-- 🧪 Early Testing Form
-- 🛠️ GitHub Codebase
+Join our growing community of developers and energy enthusiasts. Together, we're building the future of energy optimization.
 
----
+### Discord
 
-## 🧑‍💻 License
+Connect with our community to discuss ideas, ask questions, and collaborate on new features.
 
-This project is released under the **MIT License**.
+<a href="https://discord.com/invite/VQa9UY5SsS" target="_blank" class="action-button">Join Discord</a>
 
----
+### GitHub
 
-Let’s mine smarter, together ⚒️
+Explore our codebase, contribute to development, or fork the project to create your own solution.
+
+<a href="https://github.com/edge-mining" target="_blank" class="action-button">View on GitHub</a> 

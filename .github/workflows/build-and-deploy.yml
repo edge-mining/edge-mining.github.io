@@ -1,0 +1,41 @@
+name: Build and Deploy VuePress Site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout edgemining.energy repository
+        uses: actions/checkout@v4
+        with:
+          path: edgemining-energy
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: edgemining-energy/package-lock.json
+          
+      - name: Install dependencies
+        working-directory: edgemining-energy
+        run: npm ci
+        
+      - name: Build VuePress site
+        working-directory: edgemining-energy
+        run: npm run docs:build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist
+          destination_dir: ./
+          cname: edgemining.energy
