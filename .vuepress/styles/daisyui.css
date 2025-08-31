@@ -1,0 +1,50 @@
+/* Import Tailwind CSS and DaisyUI */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* DaisyUI theme variables */
+[data-theme="edge-mining"] {
+  --p: 102 126 234; /* primary */
+  --s: 118 75 162;   /* secondary */
+  --a: 240 147 251;  /* accent */
+  --n: 44 62 80;     /* neutral */
+  --b1: 255 255 255; /* base-100 */
+  --in: 58 191 248;  /* info */
+  --su: 54 211 153;  /* success */
+  --wa: 251 189 35;  /* warning */
+  --er: 248 114 114; /* error */
+}
+
+/* Custom component styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-content hover:bg-primary-focus;
+}
+
+.card {
+  @apply rounded-lg border border-base-300;
+}
+
+.card-title {
+  @apply text-lg font-semibold;
+}
+
+.alert {
+  @apply rounded-lg p-4;
+}
+
+.alert-info {
+  @apply bg-info text-info-content;
+}
+
+.table {
+  @apply w-full;
+}
+
+.table-zebra tbody tr:nth-child(even) {
+  @apply bg-base-200;
+}
