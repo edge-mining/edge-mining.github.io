@@ -1,0 +1,4 @@
+# VuePress temp files
+.vuepress/.temp/
+.vuepress/.cache/
+.vuepress/dist/
