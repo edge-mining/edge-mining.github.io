@@ -1,43 +1,165 @@
+:root {
+    color-scheme: dark;
+    --color-base-100: oklch(0.1543 0 0);
+    --color-base-200: oklch(0.1957 0 0);
+    --color-base-300: oklch(0.3012 0 0);
+    --color-base-content: oklch(0.931 0 0);
+    --color-primary: #beffa3;
+    --color-primary-content: oklch(28% 0.066 53.813);
+    --color-secondary: oklch(76% 0.177 163.223);
+    --color-secondary-content: oklch(26% 0.051 172.552);
+    --color-accent: oklch(71% 0.203 305.504);
+    --color-accent-content: oklch(29% 0.149 302.717);
+    --color-neutral: oklch(27% 0.041 260.031);
+    --color-neutral-content: oklch(98% 0.003 247.858);
+    --color-info: oklch(58% 0.158 241.966);
+    --color-info-content: oklch(97% 0.013 236.62);
+    --color-success: oklch(64% 0.2 131.684);
+    --color-success-content: oklch(98% 0.031 120.757);
+    --color-warning: #c46a36;
+    --color-warning-content: oklch(98% 0.016 73.684);
+    --color-error: oklch(59% 0.249 0.584);
+    --color-error-content: oklch(97% 0.014 343.198);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background-color: var(--color-base-100);
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1f1f1f;
-    color: white;
-    font-family: system-ui, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--color-base-content);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        linear-gradient(180deg, rgb(21 21 21 / 0.18), rgb(21 21 21 / 0.7)),
+        url("background-light.png");
+    background-color: var(--color-base-100);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before,
+body::after {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    content: "";
+}
+
+body::before {
+    background:
+        radial-gradient(circle at 30% 25%, rgb(190 255 163 / 0.24), transparent 28rem),
+        radial-gradient(circle at 71% 42%, rgb(196 106 54 / 0.24), transparent 26rem),
+        radial-gradient(circle at 73% 80%, rgb(0 50 78 / 0.58), transparent 30rem);
+    mix-blend-mode: screen;
+}
+
+body::after {
+    background: rgb(0 0 0 / 0.14);
+}
+
+.site-shell {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    align-content: center;
+    gap: clamp(1.35rem, 3vw, 2rem);
+    padding: clamp(1.5rem, 5vw, 4rem);
     text-align: center;
 }
 
-.logo {
-    margin-bottom: 2rem;
+.brand-logo {
+    width: clamp(13.5rem, 28vw, 21rem);
+    height: auto;
+    filter:
+        drop-shadow(0 0 1.4rem rgb(190 255 163 / 0.1))
+        drop-shadow(0 1.1rem 2.6rem rgb(0 0 0 / 0.4));
 }
 
-.description {
-    max-width: 600px;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+.tagline {
+    max-width: min(100%, 58rem);
+    margin: 0;
+    color: rgb(255 255 255 / 0.88);
+    font-size: clamp(1rem, 1.55vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.55;
+    white-space: nowrap;
+    text-shadow: 0 0.7rem 2.2rem rgb(0 0 0 / 0.55);
 }
 
-.links {
-    font-style: italic;
-    font-size: 0.95rem;
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 }
 
-.links a {
-    color: #00bfff;
+.social-link {
+    display: inline-grid;
+    width: 3.25rem;
+    height: 3.25rem;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 0.24);
+    border-radius: 0.9rem;
+    color: rgb(255 255 255 / 0.9);
+    background: rgb(21 21 21 / 0.2);
     text-decoration: none;
+    transition:
+        border-color 160ms ease,
+        color 160ms ease,
+        background-color 160ms ease,
+        transform 160ms ease,
+        box-shadow 160ms ease;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.social-link svg {
+    width: 1.45rem;
+    height: 1.45rem;
+    fill: currentColor;
 }
 
-@media (max-width: 600px) {
-    .description {
-        padding: 0 1rem;
+.social-link:hover,
+.social-link:focus-visible {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgb(190 255 163 / 0.08);
+    box-shadow: 0 0 1.6rem rgb(190 255 163 / 0.16);
+    transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+    outline: 2px solid var(--color-warning);
+    outline-offset: 4px;
+}
+
+@media (max-width: 560px) {
+    body {
+        background-position: 42% center;
+    }
+
+    .site-shell {
+        gap: 1.25rem;
+    }
+
+    .tagline {
+        max-width: 22rem;
+        white-space: normal;
+        text-wrap: balance;
+    }
+
+    .social-link {
+        width: 3rem;
+        height: 3rem;
     }
 }
