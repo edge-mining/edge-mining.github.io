@@ -1,7 +1,7 @@
-# edgemining.energy
+# Edge Mining
 
 **Edge Mining** is a FOSS project that integrates Bitcoin mining with renewable energy systems.  
-This repository contains the source code for the project's official landing page: [edgemining.energy](https://edgemining.energy)
+This repository contains the source code for the project's official landing page on GitHub Pages.
 
 ---
 
@@ -19,11 +19,10 @@ Edge Mining helps:
 
 ## 🌐 Live Website
 
-➡️ [https://edgemining.energy](https://edgemining.energy)
+➡️ [https://edge-mining.github.io/](https://edge-mining.github.io/)
 
 This landing page explains the project’s purpose and links to:
 - 💬 Community (Discord)
-- 🧪 Early Testing Form
 - 🛠️ GitHub Codebase
 
 ---
